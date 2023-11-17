@@ -1,2 +1,0 @@
-#!/bin/bash
-java -jar /home/student/Pulpit/pwo/lab05/apps/lab05-1.0-SNAPSHOT.jar $@
