@@ -1,2 +1,3 @@
 /fibseq100.txt
-target/
+target
+nbactions.xml/
