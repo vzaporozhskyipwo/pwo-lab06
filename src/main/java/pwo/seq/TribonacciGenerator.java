@@ -1,23 +1,40 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package pwo.seq;
 
 import java.math.BigDecimal;
 
-public class TribonacciGenerator extends FibonacciGenerator {
+/**
+ * Klasa reprezentująca generator dla ciągu Tribonacci,
+ * dziedzicząca po klasie {@link FibonacciGenerator}.
+ *
+ * @author Vlad
+ * @version 1.0.0
+ */
 
+public class TribonacciGenerator extends
+        FibonacciGenerator {
+
+    /**
+     * Konstruktor inicjalizujący wartość f_3 na 0.
+     */
     public TribonacciGenerator() {
         f_3 = new BigDecimal(0);
     }
 
+    /**
+     * Metoda resetująca generator, ustawiająca f_3 na 0 i wywołująca
+     * reset na klasie nadrzędnej.
+     */
     @Override
     public void reset() {
         super.reset();
         f_3 = new BigDecimal(0);
     }
 
+    /**
+     * Metoda generująca kolejny element ciągu Tribonacci.
+     * Jeżeli lastIndex > 2, generuje element na podstawie trzech poprzednich.
+     * W przeciwnym razie ustala wartość na 1, gdy lastIndex == 2, lub na 0, gdy lastIndex < 2.
+     */
     @Override
     public BigDecimal nextTerm() {
         if (lastIndex > 2) {
